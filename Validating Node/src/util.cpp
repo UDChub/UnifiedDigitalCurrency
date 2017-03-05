@@ -136,23 +136,6 @@ std::string Util::array_to_string(std::vector<char> &input, uint size, uint offs
 	return output;
 }
 
-// template <typename T>
-// void Util::int_to_array(T input, uint size, uint offset, std::vector<char> &output) {
-// 	for(uint i = 0; i < size; i++) {
-// 		if(i+offset < output.size()) output[i+offset] = input >> (i*8);
-// 		else {
-// 			while(output.size() < i+offset) output.push_back(0);
-// 			output.push_back(input >> (i*8));
-// 		}
-// 	}
-// }
-
-// template <typename T>
-// void Util::array_to_int(std::vector<char> &input, uint size, uint offset, T &output) {
-// 	output = 0;
-// 	for(uint i = 0; i < size && i < input.size(); i++) output = output | ((unsigned char)input[i+offset] << (i*8));
-// }
-
 uint Util::current_timestamp() {
 	return std::chrono::duration_cast<std::chrono::seconds>(std::chrono::system_clock::now().time_since_epoch()).count();
 }

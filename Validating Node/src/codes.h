@@ -46,7 +46,6 @@
 #define TRANSACTION_FUTURE					0x02
 #define TRANSACTION_DAO						0x4F
 #define TRANSACTION_DAS						0x53
-
 static const std::string TRANSACTION_TYPE_BASIC		= "00";
 static const std::string TRANSACTION_TYPE_DELAYED	= "01";
 static const std::string TRANSACTION_TYPE_FUTURE	= "02";

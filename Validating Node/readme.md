@@ -1,3 +1,3 @@
-#Validating Node
+# Validating Node
 
-source code of propotype version for UDC network's Validating Node
+source code of the propotype version for UDC network's Validating Node

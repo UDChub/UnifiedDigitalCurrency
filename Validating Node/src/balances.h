@@ -52,14 +52,10 @@ class Balances {
 		Balances(rocksdb::DB* balancesDB);
 
 		uint64_t GetBalance(std::string account);
-		//bool UpdateBalances(Transaction* Tx);
-		//bool RollbackBalances(Transaction* Tx);
 		bool UpdateBalances(std::vector<std::pair<std::string, uint64_t>> &from, std::vector<std::pair<std::string, uint64_t>> &to);
 		bool RollbackBalances(std::vector<std::pair<std::string, uint64_t>> &from, std::vector<std::pair<std::string, uint64_t>> &to, bool add=false);
 
 		void UpdateFromLedger(std::unordered_map<std::string,uint64_t> balances);
-		//void UpdateFromLedger(std::unordered_map<std::string,uint64_t> balances);
-		//void RollbackFromLedger(std::string opsFile);
 
 	private:
 		std::mutex dbMutex;

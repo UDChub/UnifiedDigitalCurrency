@@ -53,22 +53,6 @@
 #include "threads_manager.h"
 
 
-// EntityStruct& EntityStruct::operator=(const EntityStruct &entity) {
-// 	entityId = entity.entityId;
-// 	publicKey = entity.publicKey;
-// 	host = entity.host;
-// 	ip = entity.ip;
-// 	port = entity.port;
-// 	socket = entity.socket;
-// 	return *this;
-// }
-// EntityStruct::~EntityStruct() {
-// 	if(socket.is_open()) {
-// 		socket.shutdown(boost::asio::ip::tcp::socket::shutdown_both);
-// 		socket.close();
-// 	}
-// }
-
 Entities::Entities(std::unordered_map<std::string, EntityStruct> entitiesData) : entitiesData(entitiesData) {
 }
 

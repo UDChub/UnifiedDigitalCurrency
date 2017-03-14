@@ -51,27 +51,6 @@ rocksdb::DB* LoadBalancesDB();
 rocksdb::DB* LoadKeysDB();
 rocksdb::DB* LoadSlotsDB();
 
-
-/*
-class AdditionMergeOperator: public AssociativeMergeOperator {
-	public:
-		virtual bool Merge(const Slice &key, const Slice* existing_value, const Slice& value, string* new_value, Logger* logger) const override {
-			uint64_t existing = 0;
-	        uint64_t oper;
-
-	        if (existing_value) {
-	          if (!Deserialize(*existing_value, &existing)) existing = 0;
-	        }
-
-	        if (!Deserialize(value, &oper)) oper = 0;
-
-	        auto now = existing + oper;
-	        *new_value = Serialize(now);
-
-	        return true;
-		}
-};
-*/
 }
 
 #endif

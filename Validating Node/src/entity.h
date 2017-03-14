@@ -55,11 +55,7 @@ struct EntityStruct {
 	std::string host;
 	std::string ip;
 	uint port;
-	// boost::asio::ip::tcp::socket socket = boost::asio::ip::tcp::socket(NETWORK_SOCKET_SERVICE);
 	boost::asio::ip::tcp::socket *socket;
-	
-	// EntityStruct& operator=(const EntityStruct &entity);
-	// ~EntityStruct();
 };
 
 class Entities {

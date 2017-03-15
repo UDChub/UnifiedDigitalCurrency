@@ -218,7 +218,9 @@ bool Crypto::Verify(std::string message, std::string signature, std::string publ
 				CryptoPP::SignatureVerificationFilter::THROW_EXCEPTION | CryptoPP::SignatureVerificationFilter::PUT_RESULT
 		));
 	}
-	catch(CryptoPP::Exception& e) return false;
+	catch(CryptoPP::Exception& e) {
+		return false;
+	}
 	return result;
 }
 
